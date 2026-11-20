@@ -26,6 +26,9 @@ extern lv_obj_t *ui_label_odometer_value;
 void ui_tach_set_rpm(int rpm);
 void ui_tach_set_gear(int gear);
 
+// Values are degrees F, PSI, degrees F. Pass NAN for unavailable data.
+void ui_info1_set_values(float coolant_f, float oil_psi, float transmission_f);
+
 // CUSTOM VARIABLES
 
 #ifdef __cplusplus
@@ -33,5 +36,6 @@ void ui_tach_set_gear(int gear);
 #endif
 
 #endif
+
 
 

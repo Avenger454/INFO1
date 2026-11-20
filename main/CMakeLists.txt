@@ -63,6 +63,7 @@ idf_component_register(
         "tach_ui/ui.c"
         "tach_ui/screens/ui_Screen1.c"
         "tach_ui/fonts/tach_digits.c"
+        "tach_ui/fonts/info1_digits_96.c"
         "tach_ui/images/ui_img_1656279599.c"
         "tach_ui/fonts/ui_font_DotoLarge.c"
         "tach_ui/fonts/ui_font_Doto_48.c"
@@ -84,7 +85,7 @@ idf_component_register(
         "./canbus"
         "."
 
-    EMBED_FILES "tach_ui/images/tach_face.rgb565"
+    EMBED_FILES "tach_ui/images/info1_face.rgb565"
 
     EMBED_TXTFILES
         ${CAN_PROTOCOL_JSON}
@@ -98,3 +99,4 @@ target_link_libraries(${COMPONENT_LIB} INTERFACE
     "-Wl,--wrap=esp_lcd_new_dsi_bus"
     "-Wl,--undefined=__wrap_esp_lcd_new_dsi_bus"
 )
+
